@@ -26,8 +26,6 @@ export default function Home() {
   const words = [m.inspire(), m.innovate(), m.create(), m.code(), m.collab()];
   const [index, setIndex] = useState(0);
 
-  const [hoveredMember, setHoveredMember] = useState<string | null>(null)
-
   const [activeIndex, setActiveIndex] = useState<number | null>(0)
   const [isMobile, setIsMobile] = useState(false)
   const [faqData, setFaqData] = useState<{ question: string, answer: string }[]>([])
@@ -250,8 +248,6 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                onMouseEnter={() => setHoveredMember(member)}
-                onMouseLeave={() => setHoveredMember(null)}
               >
                 <div className="relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col">
 
