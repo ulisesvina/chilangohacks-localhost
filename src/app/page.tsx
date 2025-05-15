@@ -77,10 +77,6 @@ export default function Home() {
           linkedin: "https://www.linkedin.com/in/sebaspv/"
         }
       },
-      jafit: {
-        name: "Carol Jafit",
-        role: m.jafit_role(),
-      },
       elohim: {
         name: "Elohim Hernández",
         role: m.elohim_role(),
@@ -139,6 +135,9 @@ export default function Home() {
             <Button size="lg">{m.hero_cta()}</Button>
             <a href="https://gofund.me/27f7be92" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="lg">{m.donate()} 💖</Button>
+            </a>
+            <a href="/pdf/convocatoria.pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" size="lg">{m.call()}</Button>
             </a>
           </div>
         </div>
@@ -241,7 +240,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-            {["ulises", "mariana", "sebastian", "jafit", "juan", "ivan", "elohim", "bruno"].map((member, i) => (
+            {["ulises", "mariana", "sebastian", "juan", "ivan", "elohim", "bruno"].map((member, i) => (
               <motion.div
                 key={i}
                 className="group"
